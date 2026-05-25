@@ -41,6 +41,10 @@ filterRangeInPlace(arr, 1, 4);
 */
 
 //	Sort in decreasing order
+[5, 2, 1, -10, 8].sort(function(a, b) { return a - b; }).reverse();
+/*
+let arr = [5, 2, 1, -10, 8];
+*/
 
 //	Copy and sort array
 
