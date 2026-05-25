@@ -1,8 +1,12 @@
 //	============================ ARRAYS E LOOPS
 
 //	Translate border-left-width to borderLeftWidth
-function camelize(str){
-	return str.split("-").filter(Boolean).map((item) => item[0].toUpperCase() + item.slice(1).toLowerCase()).join("");
+function camelize(str) {
+  return str
+    .split("-")
+    .filter(Boolean)
+    .map((item) => item[0].toUpperCase() + item.slice(1).toLowerCase())
+    .join("");
 }
 /*
 camelize("background-color") == 'backgroundColor';
@@ -11,8 +15,8 @@ camelize("-webkit-transition") == 'WebkitTransition';
 */
 
 //	Filter range
-function filterRange(arr, a, b){
- 	return arr.filter((item) => item >= a && item <= b);
+function filterRange(arr, a, b) {
+  return arr.filter((item) => item >= a && item <= b);
 }
 /*
 let arr = [5, 3, 8, 1];
@@ -21,12 +25,25 @@ alert( filtered ); // 3,1 (matching values)
 alert( arr ); // 5,3,8,1 (not modified)
 */
 
-//Filter range "in place"
+//	Filter range "in place"
+function filterRangeInPlace(arr, a, b) {
+  for (let i = 0; i < arr.length; i++) {
+	let tosko = arr[i];
+    if (tosko < a || tosko > b){
+		arr.splice(i, 1);
+		i--;
+	}
+  }
+}
+/*
+let arr = [5, 3, 8, 1];
+filterRangeInPlace(arr, 1, 4);
+*/
 
-//Sort in decreasing order
+//	Sort in decreasing order
 
-//Copy and sort array
+//	Copy and sort array
 
-//Shuffle an array
+//	Shuffle an array
 
-//Filter unique array members
+//	Filter unique array members
