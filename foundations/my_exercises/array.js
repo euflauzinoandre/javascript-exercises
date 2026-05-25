@@ -28,11 +28,11 @@ alert( arr ); // 5,3,8,1 (not modified)
 //	Filter range "in place"
 function filterRangeInPlace(arr, a, b) {
   for (let i = 0; i < arr.length; i++) {
-	let tosko = arr[i];
-    if (tosko < a || tosko > b){
-		arr.splice(i, 1);
-		i--;
-	}
+    let tosko = arr[i];
+    if (tosko < a || tosko > b) {
+      arr.splice(i, 1);
+      i--;
+    }
   }
 }
 /*
@@ -41,12 +41,23 @@ filterRangeInPlace(arr, 1, 4);
 */
 
 //	Sort in decreasing order
-[5, 2, 1, -10, 8].sort(function(a, b) { return a - b; }).reverse();
+[5, 2, 1, -10, 8]
+  .sort(function (a, b) {
+    return a - b;
+  })
+  .reverse();
 /*
 let arr = [5, 2, 1, -10, 8];
 */
 
 //	Copy and sort array
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+/*
+let arr = ["HTML", "JavaScript", "CSS"];
+let sorted = copySorted(arr);
+*/
 
 //	Shuffle an array
 
