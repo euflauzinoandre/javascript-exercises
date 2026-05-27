@@ -72,3 +72,17 @@ shuffle(arr); // arr = [3, 1, 2]
 */
 
 //	Filter unique array members
+function unique(arr) {
+	let newArr = [];
+	for (let i = 0; i < arr.length; i++) {
+		if (!(arr.includes(arr[i])))
+			newArr.push(arr[i])
+	}
+	return newArr;
+}
+/*
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+unique(strings);
+*/
